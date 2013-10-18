@@ -198,7 +198,7 @@ int main(void)
     
     sei();
           
-    uart_puts_P("String stored in FLASH\n");
+    uart_puts_P("Strart receive\n");
     
     uart_putc('\r');
     
