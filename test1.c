@@ -1,14 +1,3 @@
-/*************************************************************************
-Title:    example program for the Interrupt controlled UART library
-Author:   Peter Fleury <pfleury@gmx.ch>   http://jump.to/fleury
-File:     $Id: test_uart.c,v 1.5 2012/09/14 17:59:08 peter Exp $
-Software: AVR-GCC 3.4, AVRlibc 1.4
-Hardware: any AVR with built-in UART, tested on AT90S8515 at 4 Mhz
-
-DESCRIPTION:
-          This example shows how to use the UART library uart.c
-
-*************************************************************************/
 #include <stdlib.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
@@ -160,9 +149,10 @@ void readPacket() {
                                         if ((_checksumTotal & 0xff) == 0xff) {
                                                 _response_Checksum = b;
                                                 _response_Available = true;
-												uart_puts_P("OK\n");///////////////////////////
-												DDRA = 0x02;////////////////////////////////////
-												PORTA = 0x02;//////////////////////////
+												//no check
+												//uart_puts_P("OK\n");///////////////////////////
+												//DDRA = 0x02;////////////////////////////////////
+												//PORTA = 0x02;//////////////////////////
 
                                                 _response_ERROR = NO_ERROR;
                                         } else {
