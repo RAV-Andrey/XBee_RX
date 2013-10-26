@@ -4,7 +4,7 @@
 
 ## General Flags
 PROJECT = test1
-MCU = atmega16
+MCU = atmega168
 TARGET = test1.elf
 CC = avr-gcc
 
